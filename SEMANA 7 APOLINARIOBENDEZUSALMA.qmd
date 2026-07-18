@@ -1,0 +1,55 @@
+---
+title: "SEMANA 7"
+author: "APOLINARIO BENDEZU SALMA"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+#DATOS
+x<-c(1,2,3,4,5)
+y<-c(60,68,75,82,90)
+```
+
+```{r}
+#COEFICIENTE DE CORRELACIÓN DE PEARSSON
+cor(x,y)
+```
+
+```{r}
+#OBTENIENDO COEFICIENTES DE LA REGRESIÓN
+#MODELO
+modelo<-lm(y~x)
+coef(modelo)
+
+```
+
+```{r}
+#Hay una relación fuerte entre Tiempo de cuidado y Satisfaccion del paciente
+#Predicir la satisfacción cuando el tiempo de cuidado sea de 6 horas
+predict(modelo,data.frame(x=6))
+```
+
+```{2x1}
+
+```
+
+```{r}
+
+```
+
+```{r}
+#Grafico
+plot(x,y,main = "Tiempo de cuidado y Satisfaccion del paciente",
+     xlab = "Tiempo de cuidado",
+     ylab = "Puntaje de satisfaccion",pch=19)
+abline(modelo,lwd=2)
+```
