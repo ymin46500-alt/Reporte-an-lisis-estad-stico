@@ -1,0 +1,90 @@
+---
+title: "SEMANA11"
+author: "APOLINARIO BENDEZU SALMA"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+#COEFICIENTE BETA
+
+beta<--0.405
+
+#CALCULO DEL HAZARD RATIO
+HR<-exp(beta)
+
+#MOSTRAR RESULTADO
+HR
+```
+
+```{r}
+#INDICAR SI ES ALTO O BAJO RIESGO
+cat("Hazard Ratio=",round(HR,3),"\n")
+cat("El programa incrementa el riesgo en",round((HR-1)*100,1),"% respecto al grupo control.")
+```
+
+```{r}
+#Hazard Ratio reportado
+HR<-1.80
+#INCREMENTO PORCENTUAL DE RIESGO
+incremento<-(HR-1)*100
+#MOSTRAR RESULTADO
+cat("Hazard Ratio=",HR,"\n")
+cat("Alto riesgo",incremento,"%\n")
+```
+
+```{r}
+# Hazard Ratio reportado
+HR<-0.75
+#INCREMENTO PORCENTUAL DE RIESGO
+incremento<-(1-HR)*100
+#MOSTRAR RESULTADO
+cat("Hazard Ratio=",HR,"\n")
+cat("Bajo riesgo",incremento,"%\n")
+```
+
+```{r}
+# Hazard Ratio reportado
+HR<-1.35
+#INCREMENTO PORCENTUAL DE RIESGO
+incremento<-(HR-1)*100
+#MOSTRAR RESULTADO
+cat("Hazard Ratio=",HR,"\n")
+cat("Alto riesgo",incremento,"%\n")
+```
+
+```{r}
+#COEFICIENTE BETA
+beta<--1.20
+
+#CALCULO DEL HAZARD RATIO
+HR<-exp(beta)
+
+#MOSTRAR RESULTADO
+HR
+```
+
+```{r}
+#INDICAR SI ES ALTO O BAJO RIESGO
+cat("Hazard Ratio=",round(HR,3),"\n")
+cat("El programa aumenta el riesgo en",round((HR-1)*100,1),"% respecto al grupo control.")
+```
+
+```{r}
+# Hazard Ratio reportado
+HR<-2.10
+#INCREMENTO PORCENTUAL DE RIESGO
+incremento<-(HR-1)*100
+#MOSTRAR RESULTADO
+cat("Hazard Ratio=",HR,"\n")
+cat("Alto riesgo",incremento,"%\n")
+
+```
